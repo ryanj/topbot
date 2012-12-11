@@ -23,7 +23,7 @@
     "npm": ">= 1.0.0"
   },
   "dependencies": {
-    "irc": "~0.3.4"
+    "jerk": "~1.1.23"
   },
   "devDependencies": {},
   "bundleDependencies": [],
