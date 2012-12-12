@@ -1,14 +1,16 @@
 #!/bin/env node
 //  OpenShift sample Node application
 //var express = require('express');
+
 var jerk = require( 'jerk' )
 //var irc = require('irc');
 
 var bot_name = 'bad_sudobot';
 var irc_options =
-  { server: 'irc.freenode.net'
+  { server: 'chat.freenode.net'
   , nick: bot_name
   , channels: [ '#sudoroom' ]
+  , port: 8001
   }
 
 var sudobot = jerk( function( j ) {
