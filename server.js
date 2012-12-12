@@ -27,8 +27,6 @@ var sudobot = jerk( function( j ) {
   })
 
   j.watch_for( /^say (.+)$/, function( message ) {
-    console.log( message )
-    console.log( "source is:" + message.source )
     if(message.source[1] !== "#"){
       message.msg( message.user + ': you got it!' )
       sudobot.say( '#sudoroom', message.match_data[1] )
