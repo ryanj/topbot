@@ -4,27 +4,18 @@
 
 var irc = require('irc');
 var bot = new irc.Client('chat.freenode.net', 'topbot', {
-    channels: ['#sudoroom', '#botwar', '#botzoo'],
+    channels: ['#botwar', '#botzoo'],
     port: 8001,
+    password: process.env.IRC_PASSWD,
     debug: true
 });
 
+console.log("PROCESS>ENV>IRC_PASS ISSS   ====   " + process.env.IRC_PASSWD);
+
 bot.addListener('message', function(from, to, message) {
    if(message.indexOf('yarr') > -1) {
-        bot.say(to, 'Arrr Matey!');
+        bot.say(to, 'Arrr indeed!');
    }
-});
-
-bot.addListener('message', function(from, to, message) {
-    if(message.indexOf('<3') > -1) {
-        bot.say(to, '<3');
-    }
-});
-
-bot.addListener('message', function(from, to, message) {
-    if(message == 'randomize') {
-        bot.say(to, Math.round(Math.random() * 10));
-    }
 });
 
 bot.addListener('pm', function (from, message) {
