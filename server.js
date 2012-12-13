@@ -3,13 +3,11 @@
 //var express = require('express');
 
 var jerk = require( 'jerk' )
-//var irc = require('irc');
 
-var bot_name = 'bad_sudobot';
 var irc_options =
   { server: 'chat.freenode.net'
-  , nick: bot_name
-  , channels: [ '#sudoroom' ]
+  , nick: 'topbot'
+  , channels: [ '#sudoroom', '#botzoo' ]
   , port: 8001
   }
 
